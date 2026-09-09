@@ -1,0 +1,70 @@
+{
+  "_comment": "Business jet, Mach-dependent model, at Stengel's documented example flight condition (3,050 m, Mach 0.3). This reproduces FLIGHTv2.m's original default configuration exactly -- see docs/ARCHITECTURE.md for the verification that confirms this.",
+
+  "aircraft": {
+    "builder": "buildBusinessJetMach"
+  },
+
+  "rotationMode": "Euler",
+
+  "flightCondition": {
+    "altitudeMeters": 3050,
+    "mach": 0.3
+  },
+
+  "analysis": {
+    "trim": true,
+    "linearize": false,
+    "simulate": true
+  },
+
+  "time": {
+    "initial": 0,
+    "final": 30
+  },
+
+  "initialConditions": {
+    "alphaDeg": 0,
+    "betaDeg": 0,
+    "altitudeRateMps": 0,
+    "rollRateDegPerSec": 0,
+    "pitchRateDegPerSec": 0,
+    "yawRateDegPerSec": 0,
+    "rollAngleDeg": 0,
+    "yawAngleDeg": 0,
+    "northPositionM": 0,
+    "eastPositionM": 0
+  },
+
+  "trim": {
+    "initialGuess": [-0.1, 0.4, 0.01]
+  },
+
+  "testInputs": {
+    "elevatorDeg": -1,
+    "aileronDeg": 0,
+    "rudderDeg": 0,
+    "throttle": 0,
+    "asymmetricSpoilerDeg": 0,
+    "flapDeg": 0,
+    "stabilatorDeg": 0
+  },
+
+  "statePerturbation": {
+    "u": 0, "v": 0, "w": 0,
+    "x": 0, "y": 0, "z": 0,
+    "p": 0, "q": 0, "r": 0,
+    "phiDeg": 0, "thetaDeg": 0, "psiDeg": 0
+  },
+
+  "controlHistory": {
+    "enabled": true,
+    "timesSeconds": [0, 1, 2, 30],
+    "deltas": [
+      {"elevatorDeg": 0, "aileronDeg": 0, "rudderDeg": 0, "throttle": 0, "asymmetricSpoilerDeg": 0, "flapDeg": 0, "stabilatorDeg": 0},
+      {"elevatorDeg": 0, "aileronDeg": 0, "rudderDeg": 0, "throttle": 0, "asymmetricSpoilerDeg": 0, "flapDeg": 0, "stabilatorDeg": 0},
+      {"elevatorDeg": 0, "aileronDeg": 0, "rudderDeg": 0, "throttle": 0, "asymmetricSpoilerDeg": 0, "flapDeg": 0, "stabilatorDeg": 0},
+      {"elevatorDeg": 0, "aileronDeg": 0, "rudderDeg": 0, "throttle": 0, "asymmetricSpoilerDeg": 0, "flapDeg": 0, "stabilatorDeg": 0}
+    ]
+  }
+}
